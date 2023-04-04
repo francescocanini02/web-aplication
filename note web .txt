@@ -1,0 +1,385 @@
+
+C:\Users\Utente Corso IFTS>code
+
+C:\Users\Utente Corso IFTS>cd onedrive
+
+C:\Users\Utente Corso IFTS\OneDrive>cd desktop
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop>cd web-aplication
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\web-aplication>cd..
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop>cd progetto-laravel
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel>cd example-app
+
+per avviarlo su localhost e porta 8000, si esegue il comando php -S 127.0.0.1:8000
+
+Quale tra le seguenti affermazioni relative ai namespace é vera:
+
+1)I namespace risolvono il problema della coesistenza di classi che estendono una classe padre
+2)I namespace possono essere paragonati ad un percorso di cartelle su filesystem
+3)L'utilizzo dei namespace è sconsigliato in caso di progetti complessi
+4)Per utilizzare i namespace, è obbligatorio usare la sintassi "use"
+La risposta corretta è la numero 2: "I namespace possono essere paragonati ad un percorso di cartelle su filesystem".
+
+Gli altri affermazioni sono false o incomplete:
+
+I namespace non risolvono direttamente il problema della coesistenza di classi che estendono una classe padre, ma possono aiutare ad organizzare il codice in modo più chiaro e a prevenire collisioni di nomi tra classi, funzioni e costanti.
+
+L'utilizzo dei namespace può essere molto utile in caso di progetti complessi, poiché permettono di organizzare il codice in modo gerarchico e di evitare collisioni di nomi.
+
+L'utilizzo della sintassi "use" non è obbligatorio per utilizzare i namespace, ma può rendere il codice più leggibile e ridurre la necessità di utilizzare il nome completo di una classe o di una funzione ogni volta che vengono utilizzate.
+
+
+
+
+francescocanini240@gmail.com
+Relativamente al protocollo HTTP quale é corretta:
+
+1)Gli errori con status code 500 esprimono delle problematiche lato client
+2)Gli header della risposta servono ad identificare l'esito positivo o meno della richiesta
+3)La richiesta contiene una sezione composta da metodo, URI e versione del protocollo.
+4)La risposta contiene una sezione composta da metodo, URI e header di risposta
+La risposta corretta è la numero 3: "La richiesta contiene una sezione composta da metodo, URI e versione del protocollo".
+
+Le altre affermazioni sono false o incomplete:
+
+Gli errori con status code 500 indicano un errore lato server, non lato client.
+
+Gli header della risposta servono ad aggiungere informazioni alla risposta stessa, come ad esempio il tipo di contenuto, la data di scadenza della risorsa, l'encoding utilizzato, ma non sono direttamente utilizzati per identificare l'esito positivo o meno della richiesta. Per identificare l'esito della richiesta viene utilizzato lo status code.
+
+La risposta non contiene una sezione composta da metodo, URI e header di risposta, ma contiene lo status code che indica l'esito della richiesta, eventuali header aggiuntivi e il body della risposta.
+
+
+
+
+francescocanini240@gmail.com
+Il pattern  Front Controller:
+
+1)si basa sulla creazione di un unico punto di accesso principale all'applicazione, che si occupa del dispatch delle varie richieste
+2)può essere gestito creando un file php, richiamabile direttamente da browser, per ogni funzionalità richiesta. Ad esempio, leggi_cliente.php
+3)non è presente nativamente nel framework Laravel
+4)è, in parole povere, un centralinista che si occupa dell'interfacciamento con un database relazionale
+La risposta corretta è la numero 1: "Il pattern Front Controller si basa sulla creazione di un unico punto di accesso principale all'applicazione, che si occupa del dispatch delle varie richieste".
+
+Le altre affermazioni sono false o incomplete:
+
+La gestione di un Front Controller non prevede la creazione di un file PHP per ogni funzionalità richiesta, ma la creazione di un unico punto di accesso che si occupa di gestire tutte le richieste e di distribuirle ai vari controller.
+
+Il framework Laravel utilizza il pattern Front Controller come parte del suo nucleo centrale, quindi è presente nativamente all'interno di Laravel.
+
+Il pattern Front Controller non ha nulla a che fare con l'interfacciamento con un database relazionale, ma si occupa dell'organizzazione e della gestione delle richieste all'interno dell'applicazione.
+
+
+
+
+francescocanini240@gmail.com
+Composer install e update:
+
+1)il comando composer install permette di installare le dipendenze presenti nel file composer.lock
+2)eseguendo il comando composer update, solo il file composer.json viene aggiornato
+3)eseguendo il comando composer install, viene creato (se non c'è) il file composer.lock e le dipendenze vengono scaricate nella cartella vendor
+4)eseguendo il comando composer update, viene aggiornato il file composer.lock ma non le librerie presenti nella cartella vendor
+La risposta corretta è la numero 3: "Eseguendo il comando composer install, viene creato (se non c'è) il file composer.lock e le dipendenze vengono scaricate nella cartella vendor".
+
+Le altre affermazioni sono false o incomplete:
+
+Il comando composer install permette di installare le dipendenze presenti nel file composer.json e nel file composer.lock, che definiscono le versioni specifiche delle dipendenze utilizzate dal progetto.
+
+Eseguendo il comando composer update, il file composer.json viene aggiornato con le ultime versioni delle dipendenze disponibili e il file composer.lock viene rigenerato, includendo le nuove versioni delle dipendenze.
+
+Eseguendo il comando composer update, il file composer.lock viene aggiornato con le nuove versioni delle dipendenze, e le librerie presenti nella cartella vendor vengono rimosse e sostituite con le nuove versioni.
+
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan serve
+php artisan serve
+
+php artisan route:list
+
+
+
+
+file .env per databse
+
+dollaro table id significa che nella tabela che voglio reare una colonna che sasra senza segno autoincrementale
+metodo id e un alias di increments
+datetime è un formato in cui salva lora il giorno il mese e lanno opzioni in cui modificare il datetiame del database
+se ho una tabella che si chiama users la classe la chiamo user (il modello) 
+una tabella di cats avrebbe un modello cat
+una tabella people avrebbe un modello person 
+una tabella users avrebbe un modello user
+la convenzione prevede l'uso di "snake_case"
+
+
+
+impostare le rotte e una llogica 
+ci creaiomo un controlller 
+php artisan make controller
+public function si puo chiamare come vuoi
+poi response 
+poi route nelle api 
+
+
+Route::get('/errore-di-prova', [ErrorController::class, 'nullResponse']);
+
+
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan migrate 
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan migrate
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan migrate:rollbac
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan migrate          
+
+
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan serve 
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan make:model User
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php -S 127.0.0.1:8000
+[Tue Mar 28 16:47:08 2023] PHP 8.1.12 Development Server (http://127.0.0.1:8000) started
+[Tue Mar 28 16:47:15 2023] 127.0.0.1:56592 Accepted
+[Tue Mar 28 16:47:15 2023] 127.0.0.1:56592 [404]: POST /api/users - No such file or directory       
+[Tue Mar 28 16:47:15 2023] 127.0.0.1:56592 Closing
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan serve     
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan serve
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan make:controller ControllerFra  
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan make:migration 
+create_bo_table --create=bo
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan migrate
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan make:migration create_review_table --create=Review
+
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan make:migration create_reviews_table --create=reviews
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan migrate
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan migrate
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan make:model Review                                   
+
+C:\Users\Utente Corso IFTS\OneDrive\Desktop\progetto-laravel\example-app>php artisan make:controller ReviewController                     
+
+
+
+
+api rotte duplicare ma cambiare sia users che in alto
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan serve
+
+   INFO  Server running on [http://127.0.0.1:8000].
+
+  Press Ctrl+C to stop the server
+
+  2023-04-04 14:38:54 ............................................................ ~ 3s
+  2023-04-04 14:39:16 ............................................................ ~ 0s
+  2023-04-04 14:39:23 ............................................................ ~ 0s
+  2023-04-04 14:43:01 ............................................................ ~ 0s
+  2023-04-04 14:43:04 ............................................................ ~ 0s
+  2023-04-04 14:43:29 ............................................................ ~ 0s
+  2023-04-04 14:43:45 ............................................................ ~ 0s
+  2023-04-04 14:46:00 ............................................................ ~ 0s
+  2023-04-04 14:46:58 ............................................................ ~ 0s
+  2023-04-04 14:50:29 ............................................................ ~ 0s
+^C
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan migrate:fresh
+
+  Dropping all tables ....................................................... 36ms DONE
+
+   INFO  Preparing database.
+
+  Creating migration table .................................................. 12ms DONE  
+
+   INFO  Running migrations.  
+
+  2019_12_14_000001_create_personal_access_tokens_table ..................... 28ms DONE
+  2023_03_21_164833_create_users_table ....................................... 7ms DONE  
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan migrate:fresh
+
+  Dropping all tables ....................................................... 34ms DONE
+
+   INFO  Preparing database.
+
+  Creating migration table .................................................. 10ms DONE
+.... 42ms DONE
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan make:migration create_hotels_table --create=hotels
+
+   INFO  Migration [C:\Users\docente\Desktop\progetti-laravel\example-app\database\migrations/2023_04_04_141756_create_hotels_table.php] created successfully.
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan migrate:fresh
+
+  Dropping all tables ....................................................... 38ms DONE
+
+   INFO  Preparing database.
+
+  Creating migration table .................................................. 11ms DONE  
+
+   INFO  Running migrations.  
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan make:model hotel
+
+   INFO  Model [C:\Users\docente\Desktop\progetti-laravel\example-app\app/Models/hotel.php] created successfully.  
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan make:model Hotel 
+
+   INFO  Model [C:\Users\docente\Desktop\progetti-laravel\example-app\app/Models/Hotel.php] created successfully.
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>
+
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan serve
+
+   INFO  Server running on [http://127.0.0.1:8000].
+
+  Press Ctrl+C to stop the server
+
+  2023-04-04 14:38:54 ............................................................ ~ 3s
+  2023-04-04 14:39:16 ............................................................ ~ 0s
+  2023-04-04 14:39:23 ............................................................ ~ 0s
+  2023-04-04 14:43:01 ............................................................ ~ 0s
+  2023-04-04 14:43:04 ............................................................ ~ 0s
+  2023-04-04 14:43:29 ............................................................ ~ 0s
+  2023-04-04 14:43:45 ............................................................ ~ 0s
+  2023-04-04 14:46:00 ............................................................ ~ 0s
+  2023-04-04 14:46:58 ............................................................ ~ 0s
+  2023-04-04 14:50:29 ............................................................ ~ 0s
+^C
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan migrate:fresh
+
+  Dropping all tables ....................................................... 36ms DONE
+
+   INFO  Preparing database.
+
+  Creating migration table .................................................. 12ms DONE  
+
+   INFO  Running migrations.  
+
+  2019_12_14_000001_create_personal_access_tokens_table ..................... 28ms DONE
+  2023_03_21_164833_create_users_table ....................................... 7ms DONE  
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan migrate:fresh
+
+  Dropping all tables ....................................................... 34ms DONE
+
+   INFO  Preparing database.
+
+  Creating migration table .................................................. 10ms DONE
+.... 42ms DONE
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan make:migration create_hotels_table --create=hotels
+
+   INFO  Migration [C:\Users\docente\Desktop\progetti-laravel\example-app\database\migrations/2023_04_04_141756_create_hotels_table.php] created successfully.
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan migrate:fresh
+
+  Dropping all tables ....................................................... 38ms DONE
+
+   INFO  Preparing database.
+
+  Creating migration table .................................................. 11ms DONE  
+
+   INFO  Running migrations.  
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan make:model hotel
+
+   INFO  Model [C:\Users\docente\Desktop\progetti-laravel\example-app\app/Models/hotel.php] created successfully.  
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan make:model Hotel 
+
+   INFO  Model [C:\Users\docente\Desktop\progetti-laravel\example-app\app/Models/Hotel.php] created successfully.
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan serve
+  2023-04-04 16:47:41 ............................................................ ~ 0s  
+^C
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan make:controller
+
+  What should the controller be named?
+❯ ^C
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan make:controller HotelController
+
+   INFO  Controller [C:\Users\docente\Desktop\progetti-laravel\example-app\app/Http/Controllers/HotelController.php] created successfully.  
+
+
+C:\Users\docente\Desktop\progetti-laravel\example-app>php artisan serve
+
+   INFO  Server running on [http://127.0.0.1:8000].
+
+  Press Ctrl+C to stop the server
+
+  2023-04-04 16:53:28 ............................................................ ~ 1s
+  2023-04-04 16:55:34 ............................................................ ~ 1s
+  2023-04-04 16:56:17 ............................................................ ~ 1s
+  2023-04-04 16:56:23 ............................................................ ~ 1s
+  2023-04-04 16:58:49 ............................................................ ~ 1s
+
+
+COMPOSER CREATE LARAVAEL EXAMPLE APP 
+PRIMA COSA DA FARE PER CREASRE U SISTEMA 
+COMPOSER PROMPT LARAVEL LARAVEL NOME DL PROGETTO 
+EXAPMLE APP
+
+
+
+
+GUARDARE REQUUUISITI RISORSE CHE HANNO A CHE Fare col sistema 
+utenti
+recnsioni
+hhotel
+eper ogni risorsa creare rest api 
+ COME FACCIO REST API
+
+MIGRAZIONE PER OGNI RISORS
+MDELLO
+E CONTROLLER
+PER OGNI RISORSA
+IN ROUTES VADO A DEFINIRE LE ROTTE DELLE REST API 
+
+STARE ATEMNTO A CALARLE NELLAROTTA GIUSTA?
+
+
+RELAZIONI FRA MODELLI DEVO ESPLICITARE 
+TIPO ONE TO MANY
+ 
+
+TUTTO SISPOSTA IN CONTROLLLER 
+IN BASE ALLA CONSEGNA DOVRO IDENTIFICARE LE REGOLE DI alidazzione 
+CHI STA USANDO LE REST API NON MI STA DANDO INPUT CORRERTTO? VA ASECONDA DELLA CONSEGNA
+
+VARCHAR 255 ALLORA REGOLA SARA QURELLA
+SE OPZIOPONALE NO REQUIRED
+
+DOBBIAMO CRREARE NOSTRA RISORSA CON QUERLLI IN INPUT
+
+PROVARE OGNI SINGOLA ROTTA EL REST API
+
+5 ROTTE PER OGNI RISORSA, BISOGNA PROCVARKLE TUTTE
+
+CREAZIONE MODIFICA...
+ALLINTERNO DEI VARI CONRTROLLER LE LETTURE POTRETE FARLE
+
+
+USER CONTROLLER AVEVA DUE CHIAVI ESTERNE USER ID E .. BISOGNA VEDERER SE ESISTE 
+
+
+

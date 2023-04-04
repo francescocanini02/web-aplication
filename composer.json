@@ -1,0 +1,17 @@
+{
+    "name": "demo/php",
+    "autoload": {
+        "psr-4": {
+            "Demo\\Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "francescocanini02",
+            "email": "francesco.canini@enaipriminifad.org"
+        }
+    ],
+    "require": {
+        "ramsey/uuid": "^4.7"
+    }
+}
