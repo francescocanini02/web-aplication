@@ -381,3 +381,252 @@ USER CONTROLLER AVEVA DUE CHIAVI ESTERNE USER ID E .. BISOGNA VEDERE SE ESISTE
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+laravel new library-management
+
+
+php artisan make:migration create_books_table --create=books
+php artisan make:migration create_editors_table --create=editors
+php artisan make:migration create_authors_table --create=authors
+
+// Migrazione per la tabella books
+Schema::create('books', function (Blueprint $table) {
+    $table->id();
+    $table->string('title', 100);
+    $table->integer('num_pages');
+    $table->string('abstract', 255);
+    $table->unsignedBigInteger('editor_id');
+    $table->unsignedBigInteger('author_id');
+    $table->timestamps();
+});
+
+// Migrazione per la tabella editors
+Schema::create('editors', function (Blueprint $table) {
+    $table->id();
+    $table->string('name', 100);
+    $table->string('vat_number', 20);
+    $table->timestamps();
+});
+
+// Migrazione per la tabella authors
+Schema::create('authors', function (Blueprint $table) {
+    $table->id();
+    $table->string('name', 100);
+    $table->string('surname', 100);
+    $table->timestamps();
+});
+
+
+php artisan make:model Book
+php artisan make:model Editor
+php artisan make:model Author
+
+
+
+
+
+// Modello Book
+class Book extends Model
+{
+    public function editor()
+    {
+        return $this->belongsTo(Editor::class);
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(Author::class);
+    }
+}
+
+// Modello Editor
+class Editor extends Model
+{
+    public function books()
+    {
+        return $this->hasMany(Book::class);
+    }
+}
+
+// Modello Author
+class Author extends Model
+{
+    public function books()
+    {
+        return $this->hasMany(Book::class);
+    }
+}
+
+
+php artisan make:controller BookController --resource
+php artisan make:controller EditorController --resource
+php artisan make:controller AuthorController --resource
+
+
+// Rotte per books
+Route::get('/books', 'BookController@index');
+Route::get('/books/{book}', 'BookController@show');
+Route::post('/books', 'BookController@store');
+Route::put('/books/{book}', 'BookController@update');
+Route::delete('/books/{book}', 'BookController@destroy');
+
+// Rotte per editors
+Route::get('/editors', 'EditorController@index');
+Route::get('/editors/{editor}', 'EditorController@show');
+Route::post('/editors', 'EditorController@store');
+Route::put('/editors/{editor}', 'EditorController@update');
+Route::delete('/editors/{editor}', 'EditorController@destroy');
+
+// Rotte per authors
+Route::get('/authors', 'AuthorController@index');
+Route::get('/authors/{author}', 'AuthorController@show');
+Route::post('/authors', 'AuthorController@store');
+Route::put('/authors/{author}', 'AuthorController@update');
+Route::delete('/authors/{author}', 'AuthorController@destroy');
+
+
+
+
+
+Ecco una possibile implementazione del sistema di REST API richiesto:
+
+Creazione del progetto Laravel
+arduino
+Copy code
+laravel new library-management
+Creazione delle migrazioni per le tabelle books, editors e authors
+go
+Copy code
+php artisan make:migration create_books_table --create=books
+php artisan make:migration create_editors_table --create=editors
+php artisan make:migration create_authors_table --create=authors
+Modifica delle migrazioni per aggiungere i campi alle tabelle
+php
+Copy code
+// Migrazione per la tabella books
+Schema::create('books', function (Blueprint $table) {
+    $table->id();
+    $table->string('title', 100);
+    $table->integer('num_pages');
+    $table->string('abstract', 255);
+    $table->unsignedBigInteger('editor_id');
+    $table->unsignedBigInteger('author_id');
+    $table->timestamps();
+});
+
+// Migrazione per la tabella editors
+Schema::create('editors', function (Blueprint $table) {
+    $table->id();
+    $table->string('name', 100);
+    $table->string('vat_number', 20);
+    $table->timestamps();
+});
+
+// Migrazione per la tabella authors
+Schema::create('authors', function (Blueprint $table) {
+    $table->id();
+    $table->string('name', 100);
+    $table->string('surname', 100);
+    $table->timestamps();
+});
+Creazione dei modelli per books, editors e authors
+go
+Copy code
+php artisan make:model Book
+php artisan make:model Editor
+php artisan make:model Author
+Definizione delle relazioni nei modelli
+kotlin
+Copy code
+// Modello Book
+class Book extends Model
+{
+    public function editor()
+    {
+        return $this->belongsTo(Editor::class);
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(Author::class);
+    }
+}
+
+// Modello Editor
+class Editor extends Model
+{
+    public function books()
+    {
+        return $this->hasMany(Book::class);
+    }
+}
+
+// Modello Author
+class Author extends Model
+{
+    public function books()
+    {
+        return $this->hasMany(Book::class);
+    }
+}
+Creazione dei controller per books, editors e authors
+go
+Copy code
+php artisan make:controller BookController --resource
+php artisan make:controller EditorController --resource
+php artisan make:controller AuthorController --resource
+Definizione delle rotte nel file routes/api.php
+css
+Copy code
+// Rotte per books
+Route::get('/books', 'BookController@index');
+Route::get('/books/{book}', 'BookController@show');
+Route::post('/books', 'BookController@store');
+Route::put('/books/{book}', 'BookController@update');
+Route::delete('/books/{book}', 'BookController@destroy');
+
+// Rotte per editors
+Route::get('/editors', 'EditorController@index');
+Route::get('/editors/{editor}', 'EditorController@show');
+Route::post('/editors', 'EditorController@store');
+Route::put('/editors/{editor}', 'EditorController@update');
+Route::delete('/editors/{editor}', 'EditorController@destroy');
+
+// Rotte per authors
+Route::get('/authors', 'AuthorController@index');
+Route::get('/authors/{author}', 'AuthorController@show');
+Route::post('/authors', 'AuthorController@store');
+Route::put('/authors/{author}', 'AuthorController@update');
+Route::delete('/authors/{author}', 'AuthorController@destroy');
+Ovviamente questo
+
+
+class EditorController extends Controller
